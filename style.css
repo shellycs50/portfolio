@@ -8,9 +8,16 @@
 
 } */
 
+/* monument */
+
+@font-face {
+    font-family: "Monument";
+    src: url(fonts\PPMonumentExtended-Regular.otf) format("OTF");
+}
+
 body {
     margin: 0;
-    font-family: 'Lora', serif;
+    font-family: 'Monument', serif;
     width: 100%;
     height: 100%;
     color: #ffff;
@@ -19,7 +26,7 @@ body {
 
 #navbar-content {
     position: fixed;
-    z-index: 100;
+    z-index: 15;
     top: 0;
     padding: 20px 40px 20px 40px;
     width: 100%;
@@ -29,6 +36,7 @@ body {
     margin: 0;
     /* background: rgba(0, 0, 0, 0.3);   */
     background: linear-gradient(to bottom, black, transparent 100%);
+    
     font-size: 0.9rem;
 }
 #navbar-content a {
@@ -59,8 +67,10 @@ div, p {
 }
 
 .header-background {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('concrete-dark.jpg');
-
+    /* background: linear-gradient(rgba(0, 0, 0, 0.11), rgba(148, 148, 148, 0.5)), url('images/concrete-dark.jpg'); */
+    background: linear-gradient(to top, transparent, #0000),
+    url(images/concrete-dark.jpg);
+    /* doesnt work because its to the bottom of the img not to the bottom of whats visible in the background. */
     /* background-image: url(concrete-dark.jpg); */
     margin: 0;
     padding: 0;
@@ -77,7 +87,7 @@ div, p {
 }
 
 h1 {
-    font-family: 'Quattrocento', serif;
+    font-family: 'Monument', serif;
     margin: 0;
     font-size: 10vw;
     font-weight: 400;
@@ -97,16 +107,17 @@ h1 {
     justify-content: center;
 } */
 
-#titles {
+.titles {
    padding: 95px 40px 40px 25px;
+
 }
 
 #title-1 {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    z-index: 2;
     position: relative;
+    z-index: 6;
 
 }
 
@@ -115,8 +126,7 @@ h1 {
     flex-direction: row;
     justify-content: flex-end;
     position: relative;
-    z-index: 2;
-    
+    z-index: 6;
 }
 
 .main-background {
@@ -138,7 +148,7 @@ h1 {
     padding: 18px;
     border-radius: 2px;
     margin: 0;
-    z-index: 99;
+    z-index: 6;
 }
 
 .bio i {
@@ -153,14 +163,42 @@ h1 {
     color: white;
 }
 
+#portfolio-background {
+    margin-top: 1000px;
+    display: block;
+    text-align: center;
+    background: linear-gradient(to top, transparent, #161616),
+    url(images/sky-light.jpg);
+    z-index: 3;
+}
 
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 40px;
+}
 
-
-
-
-
-
-
+.col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.col a {
+    text-decoration: none;
+    color: #0000;
+}
+#portfolio-title {
+    display: block;
+    background: none;
+}
+#portfolio-title-container
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 30px;
+}
 
 
 
