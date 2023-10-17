@@ -42,7 +42,7 @@ body {
     font-size: 0.9rem;
 }
 #navbar-content a {
-    font-size: 0.9rem;
+    font-size: .85rem;
 }
 #dropdown {
     display: none;  
@@ -145,7 +145,7 @@ h1 {
 }
 
 .bio {
-    font-size: 1.5rem;
+    font-size: 5vmin;
     text-align: center;
     max-width: 40ch;
     /* background-color: #161616; */
@@ -171,27 +171,42 @@ h1 {
 }
 
 #portfolio-background {
-    margin-top: 1000px;
+    margin-top: 500px;
     display: block;
     text-align: center;
-    /* background: linear-gradient(to top, transparent, #161616),
-    url(images/sky-light.jpg); */
+    background: linear-gradient(to top, transparent, #161616),
+    url(images/sky-light.jpg);
     z-index: 3;
 }
 
+/* portfolio rows and columns */
 .row {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     gap: 40px;
-    padding: 30px 50px 10px 50px;
-    width: 90%;
+    padding: 30px 50px 30px 50px;
+    width: 100%;
+    max-width: none;
 }
+/* serious issues IMPORTANT */
+/* :nth-child(-n + 3 of div.row) {
+    flex-direction: row-reverse;
+} */
 
 .col {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+@media only screen and (max-width: 600px) {
+    .row {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
 }
 .col a {
     text-decoration: none;
@@ -200,6 +215,7 @@ h1 {
 #portfolio-title {
     display: block;
     background: none;
+    padding-bottom: 30px;
 }
 #portfolio-title-container
 {
@@ -208,13 +224,25 @@ h1 {
     justify-content: center;
     padding: 30px;
 }
+#portfolio-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    
+    
+}
 
 .project-wrapper {
-    display: block;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.3), transparent 100%);
+    /* display: block; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.2), transparent 100%);
     /* background: linear-gradient(to top, rgba(255, 65, 65, 0.3), transparent 100%); */
-    padding: 15px 0px 30px 0px;
-    border-radius: 3px;
+    padding: 30px 0px 30px 0px;
+    /* border-radius: 20px; */
+    border-radius: 6px;
     max-width: 1200px;
     margin-bottom: 100px;
 }
@@ -231,3 +259,37 @@ h1 {
     padding: 0px 5px 0px 5px;
 }
 
+#space-evenly {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+#center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#footer {
+    padding: 20px 0px 20px 0px;
+}
+
+#footer a {
+    padding: 0px 5px 0px 5px;
+    color: #ffff;
+}
+
+.mini {
+    font-size: 1rem;
+    color: orange
+}
+
+.mini a {
+    font-size: 3rem;
+    margin: 0px 25px 0px 10px;
+    color: orange;
+    background-color: green;
+    
+}

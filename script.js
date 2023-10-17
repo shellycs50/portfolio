@@ -123,7 +123,7 @@ const title2 = document.querySelector('#title-2')
 gsap.from(title2, {duration: 1, y: -50, background: 'none'})
 
 // working to function -> fades out 
-gsap.to(headerBg, { scrollTrigger: {trigger: '.fade-trigger', start: 'bottom center', end: 'bottom center', toggleActions: 'play none reverse none'},
+gsap.to(headerBg, { scrollTrigger: {trigger: '.fade-trigger', start: 'top center', end: 'top center', toggleActions: 'play none reverse none'},
  opacity: 0});
 // fades in 
 
