@@ -24,7 +24,16 @@ body {
     height: 100%;
     color: #ffff;
     background-color: #161616;
+    
+    
 }
+::-webkit-scrollbar {
+    display: none;
+  }
+  html {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
 
 #navbar-content {
     position: fixed;
@@ -43,6 +52,7 @@ body {
 }
 #navbar-content a {
     font-size: .85rem;
+    color: #DCFC37;
 }
 #dropdown {
     display: none;  
@@ -91,7 +101,8 @@ div, p {
 h1 {
     font-family: 'Monument';
     margin: 0;
-    font-size: 10vw;
+    /* font-size: 10vh; */
+    font-size: 8vw;
     font-weight: 800;
     text-align: center;
     overflow: hidden;
@@ -110,7 +121,8 @@ h1 {
 } */
 
 .titles {
-   padding: 95px 40px 40px 25px;
+   padding: 60px 80px 40px 80px;
+   max-height: 40vh;
 
 }
 
@@ -136,7 +148,7 @@ h1 {
 .main-background {
     width: 100%;
     background-color: #161616;
-    margin-top: 30vh;
+    margin-top: 10vh;
     position: relative;
     display: flex;
     flex-flow: row wrap;
@@ -150,20 +162,26 @@ h1 {
     max-width: 40ch;
     /* background-color: #161616; */
     /* background-color: rgba(0, 0, 0, .3); */
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.3), transparent 100%);
+    background: linear-gradient(to bottom, rgba(22, 22, 22, 0.3), transparent 100%);
+   
     
-    padding: 18px;
+    padding: 15px 15px 54px 18px;
     border-radius: 2px;
     margin: 0;
     z-index: 6;
+    max-width: 1000px;
 }
 
 .bio i {
     display: inline-block;
     position: relative;
     left: .5rem;
-    top: .4rem;
-    
+    top: 1.9rem;
+}
+#spinning-logo {
+    display: inline;
+    position: static;
+    color: #DCFC37
 }
 
 .bio a {
@@ -282,14 +300,23 @@ h1 {
 }
 
 .mini {
+    display: block;
     font-size: 1rem;
-    color: orange
+    color: orange;
+    /* border: 2px solid orange; */
+    float: right;
+
+}
+#mini a {
+    font-size: 1rem;
+    color: orange;
+    text-decoration: none;
 }
 
-.mini a {
+.mini a i {
     font-size: 3rem;
-    margin: 0px 25px 0px 10px;
-    color: orange;
-    background-color: green;
+    margin: 0px 10px 0px 10px;
+    color: rgba(255, 166, 0, 0.2);
+
     
 }
