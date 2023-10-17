@@ -120,6 +120,7 @@ h1 {
     justify-content: flex-start;
     position: relative;
     z-index: 6;
+    max-width: 100%;
 
 }
 
@@ -129,6 +130,7 @@ h1 {
     justify-content: flex-end;
     position: relative;
     z-index: 6;
+    max-width: 100%;
 }
 
 .main-background {
@@ -180,9 +182,10 @@ h1 {
 .row {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     gap: 40px;
     padding: 30px 50px 10px 50px;
+    width: 90%;
 }
 
 .col {
@@ -206,6 +209,17 @@ h1 {
     padding: 30px;
 }
 
+.project-wrapper {
+    display: block;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.3), transparent 100%);
+    padding: 15px 0px 200px 0px;
+    border-radius: 3px;
 
+}
 
+.portfolio-link a {
+    color: white;
+    font-size: 2rem;
+    padding: 0px 5px 0px 5px;
+}
 

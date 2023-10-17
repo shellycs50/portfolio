@@ -3,18 +3,48 @@
 
 // JSON HANDLING
 
-let portfolio_content = '<div class="row">'
-fetch('biscuits.json').then(res => res.json()).then(data => {data.biscuits.forEach(biscuit => 
-    portfolio_content += `<div class="row"> ${biscuit} </div>`)})
+// let portfolio_content = '<div class="row">';
+// fetch('biscuits.json')
+// .then((res) => res.json())
+// .then((data) => {
+//     data.biscuits.forEach((biscuit) => {
+//     console.log(biscuit);
+//     portfolio_content += `<div class="row"> ${biscuit.name} </div>`;
+// });
+
+//     document.querySelector('#portfolio-content').innerHTML = portfolio_content;
+    
+let portfolio_content = '<div class="row">';
+fetch('biscuits.json')
+    .then(res => res.json())
+    .then(data => {
+        data.biscuits.forEach(function (biscuit) {
+            console.log(biscuit.name)
+            //**condition for testing */
+            // if (biscuit.name != 'Digestive')
+            // {
+            //     return;
+            // }
+            portfolio_content += `<div class="project-wrapper">`
+                portfolio_content += `<div class="row">`
+                    portfolio_content += `<div class="col">`
+                        portfolio_content += `<img src="${biscuit.img}" width="100%" height="auto" style="max-width: 60vw">` //** disgusting boiler plate (max width -> needs doing .col img) */
+                    portfolio_content += `</div>`
+                    portfolio_content += `<div class="col">`
+                        portfolio_content += `<h3>${biscuit.name}</h3>`
+                        portfolio_content += `<p> ${biscuit.desc.slice(0, 60)}</p>`
+                        portfolio_content += `<div class="portfolio-link">`
+                            portfolio_content += `<a href="${biscuit.wikipedia}"><i class="fa-brands fa-github"></i></a>`
+                            portfolio_content += `<a href="${biscuit.wikipedia}"><i class="fa-regular fa-eye"></i></a>`
+                        portfolio_content += `</div>`
+                portfolio_content += `</div>`
+            portfolio_content += `</div>`
+        })
+        document.querySelector('#portfolio-content').innerHTML = portfolio_content;
+
+    })
 
 
-
-
-
-
-// <div id="portfolio-title-container">
-//         <p class="bio" id="portfolio-title">Selected Projects</p>
-//         </div>
 //         <!-- 2 columns, both taking 50% (including padding) where each row is a project and a representative image. -->
 //         <div class="row">
 //             <div class="col">
@@ -46,7 +76,6 @@ fetch('biscuits.json').then(res => res.json()).then(data => {data.biscuits.forEa
 
 
 
-let timeline_test = gsap.timeline();
 const headerBg = document.querySelector('#hd-bg');
 gsap.registerPlugin(ScrollTrigger);
 
