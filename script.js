@@ -1,14 +1,15 @@
-let timeline_test = gsap.timeline()
-const headerBg = document.querySelector('#hd-bg')
-
+let timeline_test = gsap.timeline();
+const headerBg = document.querySelector('#hd-bg');
+gsap.registerPlugin(ScrollTrigger);
 
 
 // let timeln_1 = gsap.timeline( {
 //     scrollTrigger: {
 //         trigger: headerBg, 
+//         start: 
 //         end: 'opacity: 0',
 //         scrub: true,
-//         markers: false
+//         markers: true
 //     }
 // });
 
@@ -43,8 +44,10 @@ const title2 = document.querySelector('#title-2')
 
 gsap.from(title2, {duration: 1, y: -50, background: 'none'})
 
-// working to function
-// gsap.to(headerBg, {duration: 5, opacity: 0})
+// working to function -> fades out 
+gsap.to(headerBg, { scrollTrigger: {trigger: '.fade-trigger', markers: 'on', start: 'bottom center', end: 'bottom center', toggleActions: 'play none reverse none'},
+ opacity: 0});
+// fades in 
 
 
 
