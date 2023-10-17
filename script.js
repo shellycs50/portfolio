@@ -1,3 +1,51 @@
+
+
+
+// JSON HANDLING
+
+let portfolio_content = '<div class="row">'
+fetch('biscuits.json').then(res => res.json()).then(data => {data.biscuits.forEach(biscuit => 
+    portfolio_content += `<div class="row"> ${biscuit} </div>`)})
+
+
+
+
+
+
+// <div id="portfolio-title-container">
+//         <p class="bio" id="portfolio-title">Selected Projects</p>
+//         </div>
+//         <!-- 2 columns, both taking 50% (including padding) where each row is a project and a representative image. -->
+//         <div class="row">
+//             <div class="col">
+//                 <img src="codestockimage.jpg" width="400px" height="auto">
+//             </div>
+            
+//             <div class="col">
+//                 <h3> Title of Project</h3>
+//                 <p>Very brief description of the project about this long exactly.</p>
+//                 <a href="#">Github</a>
+//                 <a href="#">Live</a>
+
+//             </div>
+
+
+
+
+
+
+
+
+
+
+// BEGINNING OF GSAP, SCROLLTRIGGER ETC. 
+
+
+
+
+
+
+
 let timeline_test = gsap.timeline();
 const headerBg = document.querySelector('#hd-bg');
 gsap.registerPlugin(ScrollTrigger);
@@ -45,7 +93,7 @@ const title2 = document.querySelector('#title-2')
 gsap.from(title2, {duration: 1, y: -50, background: 'none'})
 
 // working to function -> fades out 
-gsap.to(headerBg, { scrollTrigger: {trigger: '.fade-trigger', markers: 'on', start: 'bottom center', end: 'bottom center', toggleActions: 'play none reverse none'},
+gsap.to(headerBg, { scrollTrigger: {trigger: '.fade-trigger', start: 'bottom center', end: 'bottom center', toggleActions: 'play none reverse none'},
  opacity: 0});
 // fades in 
 
