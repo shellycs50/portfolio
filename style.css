@@ -82,7 +82,7 @@ div, p {
     background-origin: border-box;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 50vw;
+    height: 50vh;
     position: fixed;
     z-index: 1;
 }
@@ -174,15 +174,15 @@ h1 {
     margin-top: 1000px;
     display: block;
     text-align: center;
-    background: linear-gradient(to top, transparent, #161616),
-    url(images/sky-light.jpg);
+    /* background: linear-gradient(to top, transparent, #161616),
+    url(images/sky-light.jpg); */
     z-index: 3;
 }
 
 .row {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     gap: 40px;
     padding: 30px 50px 10px 50px;
     width: 90%;
@@ -212,9 +212,17 @@ h1 {
 .project-wrapper {
     display: block;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.3), transparent 100%);
-    padding: 15px 0px 200px 0px;
+    /* background: linear-gradient(to top, rgba(255, 65, 65, 0.3), transparent 100%); */
+    padding: 15px 0px 30px 0px;
     border-radius: 3px;
+    max-width: 1200px;
+    margin-bottom: 100px;
+}
 
+.project-wrapper img {
+    width:100%; 
+    height:auto; 
+    max-width: 40vw;
 }
 
 .portfolio-link a {

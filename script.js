@@ -14,7 +14,7 @@
 
 //     document.querySelector('#portfolio-content').innerHTML = portfolio_content;
     
-let portfolio_content = '<div class="row">';
+let portfolio_content = ''
 fetch('biscuits.json')
     .then(res => res.json())
     .then(data => {
@@ -28,7 +28,7 @@ fetch('biscuits.json')
             portfolio_content += `<div class="project-wrapper">`
                 portfolio_content += `<div class="row">`
                     portfolio_content += `<div class="col">`
-                        portfolio_content += `<img src="${biscuit.img}" width="100%" height="auto" style="max-width: 60vw">` //** disgusting boiler plate (max width -> needs doing .col img) */
+                        portfolio_content += `<img src="${biscuit.img}">` //** disgusting boiler plate (max width -> needs doing .col img) */
                     portfolio_content += `</div>`
                     portfolio_content += `<div class="col">`
                         portfolio_content += `<h3>${biscuit.name}</h3>`
@@ -37,8 +37,9 @@ fetch('biscuits.json')
                             portfolio_content += `<a href="${biscuit.wikipedia}"><i class="fa-brands fa-github"></i></a>`
                             portfolio_content += `<a href="${biscuit.wikipedia}"><i class="fa-regular fa-eye"></i></a>`
                         portfolio_content += `</div>`
+                    portfolio_content += `</div>`
                 portfolio_content += `</div>`
-            portfolio_content += `</div>`
+        portfolio_content += `</div>`
         })
         document.querySelector('#portfolio-content').innerHTML = portfolio_content;
 
