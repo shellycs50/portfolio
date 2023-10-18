@@ -28,14 +28,23 @@
     <link rel="preload" as="image" href="images/concrete-dark.jpg">
 </head>
 <body>
+    <!-- MODAL -->
+    <div id="modal-wrapper">
+        <div id="modal-content">
+            <h2 id="modal-title">Fill Text Here</h2>
+            <p id="modal-about"> About here blah blah blah About here blah blah blah</p>
+            <img id="modal-img" src="images/Malan.webp" width="100px" height="auto">
+            <footer id="modal-footer"><div>add</div><div>links in</div><div>script</div></footer>
+        </div>
+   </div>
     <!-- need to make header background fade on scroll down. -->
     <div id="hd-bg" class="header-background"></div>
             
         <div id="navbar-content">
-            <a href="#Rob">ROB</a>
+            <a href="#">ROB</a>
             <a href="https://github.com/shellycs50" class="nomobile">GITHUB</a>
             <a href="#about-me" class="nomobile">ABOUT ME</a>
-            <a href="#contact" class="nomobile">CONTACT</a>
+            <a href="#footer" class="nomobile">CONTACT</a>
             <i id="dropdown" class="fa-solid fa-bars"></i>
         </div>
        
@@ -49,9 +58,9 @@
         <!-- obselete -->
     <!-- <div style="display: none; position: fixed; top: 200px;" class="fade-trigger"></div> -->
 
-    <div class="main-background">
-        
-        <div class="bio fade-trigger">
+    <div class="main-background fade-trigger">
+        <div id="halfvw"><img src="images/Malan.webp"></div>
+        <div class="bio">
             <p style="display: block; border-bottom: 2px solid white; float: left;"><i class="fa-solid fa-keyboard" id="spinning-logo"></i> I'M ROB,</p>
             <p>COMPUTER SCIENCE AND WEB DEVELOPMENT STUDENT INTERESTED IN ALGORITHMS AND ABSTRACT PROBLEM-SOLVING.
             <span id="mini" class="mini"><a href="#portfolio-title">JUMP<i class="fa-sharp fa-solid fa-turn-down"></i>TO PROJECTS</a></p></span>
@@ -84,7 +93,8 @@
         
 
     </div>
-    <!-- about me -->
+    
+    <!-- about me PUT ON NEW PAGE? prob need backend handling for transition animation-->
     <div id="about-me">
         <!-- use your imagination -->
     </div>
@@ -97,15 +107,14 @@
                 <p>&copy; ROBERT SHELDRICK 2023</p>
                 
                 <div id="center">
-                    <a href="https://www.youtube.com/watch?v=QtfkcaTo8os&autoplay=1"><i class="fa-brands fa-discord"></i></a>
-                    <a href="https://www.youtube.com/watch?v=QtfkcaTo8os&autoplay=1"><i class="fa-brands fa-youtube"></i></a>
-                    <a href="https://www.youtube.com/watch?v=QtfkcaTo8os&autoplay=1"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.youtube.com/watch?v=QtfkcaTo8os&autoplay=1" target="_blank"><i class="fa-brands fa-discord"></i></a>
+                    <a href="https://www.youtube.com/watch?v=QtfkcaTo8os&autoplay=1" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://www.youtube.com/watch?v=QtfkcaTo8os&autoplay=1" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
                 </div>
 
                 <p>RSGSHELDRICK@GMAIL.COM</p>
             </div>
     </div>
-   
 </body>
 
 <!-- scripts-->
@@ -113,7 +122,7 @@
 <script defer src="script.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
 <script src="https://assets.codepen.io/16327/ScrollTrigger.min.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script> 
+<!-- <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>  -->
 
 </html>
 

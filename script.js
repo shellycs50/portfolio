@@ -45,7 +45,7 @@ fetch('biscuits.json')
 
     })
 
-
+    // portfolio_content += `<a id="${biscuit.name}-open"<img src="${biscuit.img}"></a>
 //         <!-- 2 columns, both taking 50% (including padding) where each row is a project and a representative image. -->
 //         <div class="row">
 //             <div class="col">
@@ -114,13 +114,14 @@ const title1 = document.querySelector('#title-1')
 //     }
 // });
 
-gsap.from(title1, {duration: 1, y: 50, background: 'none'})
+gsap.from(title1, {duration: 1.5, y: 50, opacity: 0})
+
 
 // ************* working title 2 bit *************
 
 const title2 = document.querySelector('#title-2')
 
-gsap.from(title2, {duration: 1, y: -50, background: 'none'})
+gsap.from(title2, {duration: 1.5, y: -50, opacity: 0})
 
 // working to function -> fades out 
 gsap.to(headerBg, { scrollTrigger: {trigger: '.fade-trigger', start: 'top center', end: 'top center', toggleActions: 'play none reverse none'},
@@ -145,7 +146,7 @@ gsap.to(headerBg, { scrollTrigger: {trigger: '.fade-trigger', start: 'top center
 
 
 
-// lenis (all the homies hate lenis)
+//lenis (all the homies hate lenis)
 
 // const lenis = new Lenis()
 
