@@ -1,5 +1,5 @@
 
-
+gsap.registerPlugin(ScrollTrigger);
 
 // JSON HANDLING
 
@@ -28,7 +28,7 @@ fetch('biscuits.json')
             portfolio_content += `<div class="project-wrapper">`
                 portfolio_content += `<div class="row">`
                     portfolio_content += `<div class="col">`
-                        portfolio_content += `<img src="${biscuit.img}">` //** disgusting boiler plate (max width -> needs doing .col img) */
+                        portfolio_content += `<button id="${biscuit.name}-open" onclick="modalOpen(this.id)"><img src="${biscuit.img}"/></button>` //** disgusting boiler plate (max width -> needs doing .col img) */
                     portfolio_content += `</div>`
                     portfolio_content += `<div class="col">`
                         portfolio_content += `<h3>${biscuit.name}</h3>`
@@ -45,7 +45,57 @@ fetch('biscuits.json')
 
     })
 
-    // portfolio_content += `<a id="${biscuit.name}-open"<img src="${biscuit.img}"></a>
+
+
+
+    //modal functionality
+
+    function modalOpen(id) {
+        console.log(`opened ${id}`)
+        let name = id.substring(0, id.length - 5)
+        console.log(name)
+
+        fetch('biscuits.json')
+    .then(res => res.json())
+    .then(data => { data.biscuits.forEach(function (biscuit)
+        {
+            if (biscuit['name'] == name)
+        {
+            console.log('found')
+            //fill modal with content and open modal
+            document.querySelector('#modal-title').textContent = biscuit.name;
+            document.querySelector('#modal-about').textContent = biscuit.desc;
+            document.querySelector('#modal-img').src = biscuit.img;
+            document.querySelector('#modal-wrapper').style.display = 'flex';
+            return;
+        }
+        else 
+        {
+            console.log('not found')
+        }
+
+        }) //end of data
+        
+    }) //end of res
+    } //end of modalOpen
+
+
+    //modal exit functionality
+
+    function modalExit() {
+        modalVar = document.querySelector('#modal-wrapper');
+        // gsap.to(modalVar, {duration: 1.2, x: 3000})
+        modalVar.style.display = 'none';
+    }
+
+    // <div id="modal-wrapper">
+    // <div id="modal-content">
+    //     <h2 id="modal-title">Fill Text Here</h2>
+    //     <p id="modal-about"> About here blah blah blah About here blah blah blah</p>
+    //     <img id="modal-img" src="images/Malan.webp" width="100px" height="auto">
+    //     <footer id="modal-footer"><div>add</div><div>links in</div><div>script</div></footer>
+    // </div>
+
 //         <!-- 2 columns, both taking 50% (including padding) where each row is a project and a representative image. -->
 //         <div class="row">
 //             <div class="col">
@@ -78,7 +128,9 @@ fetch('biscuits.json')
 
 
 const headerBg = document.querySelector('#hd-bg');
-gsap.registerPlugin(ScrollTrigger);
+
+//registered at top
+// gsap.registerPlugin(ScrollTrigger);
 
 
 // let timeln_1 = gsap.timeline( {
