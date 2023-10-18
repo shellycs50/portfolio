@@ -67,6 +67,8 @@ fetch('biscuits.json')
             document.querySelector('#modal-about').textContent = biscuit.desc;
             document.querySelector('#modal-img').src = biscuit.img;
             document.querySelector('#modal-wrapper').style.display = 'flex';
+            let modalVar = document.querySelector('#modal-wrapper');
+            gsap.to(modalVar, {duration: 1.2, x: 1500})
             return;
         }
         else 
@@ -83,9 +85,9 @@ fetch('biscuits.json')
     //modal exit functionality
 
     function modalExit() {
-        modalVar = document.querySelector('#modal-wrapper');
-        // gsap.to(modalVar, {duration: 1.2, x: 3000})
-        modalVar.style.display = 'none';
+        let modalVar = document.querySelector('#modal-wrapper');
+        gsap.to(modalVar, {duration: 1.2, x: -1500})
+        // modalVar.style.display = 'none';
     }
 
     // <div id="modal-wrapper">

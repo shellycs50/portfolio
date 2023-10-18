@@ -355,7 +355,8 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    display: none;
+    display: flex;
+    right: 1500px;
 }
 
 #modal-content {
