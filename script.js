@@ -102,7 +102,51 @@ fetch('biscuits.json')
         
     }
 
+    //BARBA MOCKUP
+    function delay(n) {
+        n = n || 2000;
+        return new Promise(done => {
+            setTimeout(() => {
+                done();
+            }, n);
+        });
+    };
 
+
+    async function pageTransition(){
+        // document.querySelector('.transition').style.display = 'flex';
+        gsap.to('.transition li', { duration: .01, width: 100, height: 100, })
+        await delay(10)
+        gsap.to('.transition li', { duration: .5, scaleY: 1, transformOrigin: 'bottom left', stagger: .2})
+        gsap.to('.transition li', { duration: .5, opacity: 1, transformOrigin: 'bottom left', stagger: .2})
+        await delay(500)
+        // hide
+        gsap.to('.transition li', { duration: .5, scaleY: 0, transformOrigin: 'bottom left', stagger: .1, delay: .1})
+        gsap.to('.transition li', { duration: .5, width: 0, height: 0, transformOrigin: 'bottom left'})
+        await delay(1000)
+        gsap.to('.transition li', { duration: .1, width: 0, height: 0, transformOrigin: 'bottom left'})
+    }
+
+// call done after time with some safeguarding and snazz
+ 
+    barba.init({
+        sync: true, 
+
+        transitions: [{
+
+            async leave(data) {
+                const done = this.async();
+
+                pageTransition();
+                await delay(1000)
+                done();
+            },
+
+            async enter(data) {
+                
+            }
+        }]
+    })
 
 
 
@@ -111,7 +155,7 @@ fetch('biscuits.json')
 
     //about me load
     function aboutMe() {
-        
+        //not in use anymore -> barba
     }
 
 
