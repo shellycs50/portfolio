@@ -38,76 +38,64 @@
         <li></li>
         </ul>
     <!-- MODAL -->
-    <div id="modal-wrapper">
-        <div id="modal-content">
-            <button id="exit" onclick="modalExit()">click to exit</button>
-            <h2 id="modal-title">Fill Text Here</h2>
-            <p id="modal-about"> About here blah blah blah About here blah blah blah</p>
-            <img id="modal-img" src="images/Malan.webp" width="30%" height="auto">
-            <footer id="modal-footer"><div>add</div><div>links in</div><div>script</div></footer>
-        </div>
-   </div>
     <!-- need to make header background fade on scroll down. -->
     <div id="hd-bg" class="header-background"></div>
             
         <div id="navbar-content">
-            <a href="index.html">ROB</a>
+            <a href="index.html#redirect">ROB</a>
             <a href="https://github.com/shellycs50" class="nomobile">GITHUB</a>
-            <a href="about.html" class="nomobile">ABOUT ME</a>
-            <a href="#footer" class="nomobile">CONTACT</a>
+            <a href="about.html#redirect" class="nomobile">ABOUT ME</a>
+            <a href="contact.html#redirect" class="nomobile">CONTACT</a>
             <i id="dropdown" class="fa-solid fa-bars"></i>
         </div>
        
-        <div data-barba="container" data-barba-namespace="home">
+        <div data-barba="container" data-barba-namespace="about">
     
         <div class="titles">
-            <h1 id="title-1">About</h1>
-                <h1 id="title-2">Me</h1>
+            <h1 id="title-1">About&#8226;</h1>
+                <h1 id="title-2">&#8226;Me</h1>
         </div>
 
         <!-- obselete -->
     <!-- <div style="display: none; position: fixed; top: 200px;" class="fade-trigger"></div> -->
 
-    <div class="main-background fade-trigger">
-        <div id="halfvw"><img src="images/Malan.webp"></div>
-        <div class="bio">
-            <p style="display: block; border-bottom: 2px solid white; float: left;"><i class="fa-solid fa-keyboard" id="spinning-logo"></i> I'M ROB,</p>
-            <p>COMPUTER SCIENCE AND WEB DEVELOPMENT STUDENT INTERESTED IN ALGORITHMS AND ABSTRACT PROBLEM-SOLVING.
-            <span id="mini" class="mini"><a href="#portfolio-title">JUMP<i class="fa-sharp fa-solid fa-turn-down"></i>TO PROJECTS</a></p></span>
-        </div>
-    </div>
-
-    <div id="portfolio-background">
-        <div id="portfolio-title-container">
-            <p class="bio" id="portfolio-title">Selected Projects</p>
-        </div>
-        
-        <!-- 2 columns, both taking 50% (including padding) where each row is a project and a representative image. -->
-        <div id="portfolio-content">
-            <!-- fills from JSON -->
-        </div>
-        <!-- mockup: -->
-
-        <!-- <div class="row">
-            <div class="col">
-                <img src="codestockimage.jpg" width="100%" height="auto">
+    <div class="about-background fade-trigger">
+        <div class="about-row">
+            <div class="about-col">
+                <div class="about-box" id="top">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem consequuntur voluptate, molestiae perspiciatis cumque, minima tempora facilis, numquam in architecto possimus! Debitis, dignissimos! Ducimus, dolore?</p>
+                </div>
             </div>
-            
-            <div class="col">
-                <h3> Title of Project</h3>
-                <p>Very brief description of the project about this long exactly.</p>
-                <a href="#">Github</a>
-                <a href="#">Live</a>
-
-            </div> -->
-        
-
+           </div>
+       <div class="about-row">
+            <div class="about-col">
+                <div class="about-box">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum possimus dolore, laborum rerum eius culpa! Magni sapiente in deserunt explicabo.</p>
+                </div>
+                <div class="about-box">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum maiores, repudiandae eveniet ratione dolorem obcaecati?</p>
+                </div>
+            </div>
+       </div>
+       <div class="about-row">
+        <div class="about-col">
+            <div class="about-box">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde nisi velit sit?</p>
+            </div>
+            <div class="about-box">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam, neque architecto earum quibusdam eos laborum officia qui?</p>
+            </div>
+            <div class="about-box">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, ab maxime! Nisi!</p>
+            </div>
+        </div>
+   </div>
     </div>
-    
-    <!-- about me PUT ON NEW PAGE? prob need backend handling for transition animation-->
-    <div id="about-me">
-        <!-- use your imagination -->
+    <div id="jump-container" class="about-portfolio-link">
+        <p><span id="mini-about" class="mini"><a href="index.html#portfolio-title">JUMP<i class="fa-sharp fa-solid fa-turn-down"></i>TO PROJECTS</a></p></span>
     </div>
+
+
     <!-- footer -->
 
 </div> 

@@ -319,6 +319,7 @@ h1 {
     padding: 20px 0px 20px 0px;
 }
 
+
 #footer a {
     padding: 0px 5px 0px 5px;
     color: #ffff;
@@ -343,6 +344,28 @@ h1 {
     margin: 0px 10px 0px 10px;
     color: rgba(255, 166, 0, 0.2);
 
+}
+
+#mini-about {
+    display: block;
+    font-size: 1rem;
+    color: orange;
+    float: none;
+    margin: 50px 0px 100px 0px;
+}
+
+#mini-about a {
+    font-size: 3rem;
+    color: orange;
+    text-decoration: none;
+    position: relative;
+    left: 1vw;
+}
+
+#jump-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 #modal-wrapper {
@@ -425,5 +448,128 @@ ul.transition {
     background: white;
     width: 100%;
     list-style-type: none;
+    
+}
+
+.about-background {
+    display: block;
+    width: 100%;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    
+}
+
+.about-row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+@media screen and (max-width: 600px) {
+    .about-row {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+}
+/* contact form is of-about row */
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #0000;
+    border-radius: 5px;
+
+}
+
+.about-col {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+@media screen and (max-width: 600px) {
+    .about-col {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+
+.about-box {
+    border: 2px solid white;
+    margin: 30px;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 33ch;
+    /* height: auto; */
+}
+#top {
+    border: 2px solid #DCFC37;
+    width: 50vw;
+    margin-bottom: 30px;
+    position: relative;
+    right: 5vw;
+    font-size: 2rem;
+}
+
+/* #top p {
+    width: 100%;
+    position: relative;
+    overflow:
+} */
+@media screen and (max-width: 600px) {
+    #top {
+        border: 2px solid #DCFC37;
+        width: 50vw;
+        margin-bottom: 30px;
+        position: relative;
+        right: 5vw;
+        font-size: 5vw;
+    }
+}
+
+
+.about-box input {
+    /* text-decoration: none; */
+    color:  #0000;
+    
+}
+
+.contacters {
+    margin: 30px;
+}
+
+.contacters input {
+    width: 100%;
+    text-decoration: none;
+    font: inherit;
+}
+.contacters textarea {
+    width: 30vw;
+    height: 30vh;
+}
+
+#textme {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+#emailme {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.contacters textarea {
+    font-size: 2rem;
+    font: inherit;
     
 }

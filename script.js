@@ -13,8 +13,8 @@ gsap.registerPlugin(ScrollTrigger);
 // });
 
 //     document.querySelector('#portfolio-content').innerHTML = portfolio_content;
-    
-let portfolio_content = ''
+function portfolioFill() {
+    let portfolio_content = ''
 fetch('biscuits.json')
     .then(res => res.json())
     .then(data => {
@@ -45,6 +45,9 @@ fetch('biscuits.json')
 
     })
 
+}
+
+// portfolioFill(); *********CALLED IN BARBA
 
 
 
@@ -143,12 +146,33 @@ fetch('biscuits.json')
             },
 
             async enter(data) {
-                
+                // portfolioFill(); //this is bad. it needs to be called only when getting index, not when getting about or contact.
             }
-        }]
+        }],
+
+        views: [{
+            namespace: 'home',
+            afterEnter(data) {
+              home_jank();
+            }
+          }, {
+            namespace: 'about',
+            afterEnter(data) {
+                about_jank();
+              }
+          }]
     })
+// for some reason delaying 1 ms makes the anim work? 
+ async function about_jank() {
+    await delay(1)
+    titleAnimation()
+ }
 
-
+ async function home_jank() {
+    portfolioFill();
+    await delay(1)
+    titleAnimation()
+ }
 
 
 
@@ -184,7 +208,11 @@ fetch('biscuits.json')
 
 
 
+//form submit 
 
+function submitHandler() {
+    window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+}
 
 
 
@@ -224,7 +252,7 @@ const headerBg = document.querySelector('#hd-bg');
 
 
 
-const title1 = document.querySelector('#title-1')
+
 
 
 // let timeln_1 = gsap.timeline( {
@@ -237,24 +265,21 @@ const title1 = document.querySelector('#title-1')
 //     }
 // });
 
+function titleAnimation() {
+    let title1 = document.querySelector('#title-1')
 gsap.from(title1, {duration: 1.5, y: 50, opacity: 0})
 
 
 // ************* working title 2 bit *************
-
-const title2 = document.querySelector('#title-2')
+let headerBg = document.querySelector('#hd-bg');
+let title2 = document.querySelector('#title-2')
 
 gsap.from(title2, {duration: 1.5, y: -50, opacity: 0})
 
 // working to function -> fades out 
 gsap.to(headerBg, { scrollTrigger: {trigger: '.fade-trigger', start: 'top center', end: 'top center', toggleActions: 'play none reverse none'},
  opacity: 0});
-// fades in 
-
-
-
-// const headerBg = document.querySelector('#hd-bg')
-
+}
 
 
 
