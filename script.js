@@ -57,7 +57,7 @@ fetch('biscuits.json')
 
         fetch('biscuits.json')
     .then(res => res.json())
-    .then(data => { data.biscuits.forEach(function (biscuit)
+    .then(data => { data.biscuits.forEach(function (biscuit) //this is inefficient and defeats (a part of) the purpose of having a JSON, but it works. 
         {
             if (biscuit['name'] == name)
         {
@@ -66,9 +66,18 @@ fetch('biscuits.json')
             document.querySelector('#modal-title').textContent = biscuit.name;
             document.querySelector('#modal-about').textContent = biscuit.desc;
             document.querySelector('#modal-img').src = biscuit.img;
-            document.querySelector('#modal-wrapper').style.display = 'flex';
+            // document.querySelector('#modal-wrapper').style.display = 'flex';
             let modalVar = document.querySelector('#modal-wrapper');
-            gsap.to(modalVar, {duration: 1.2, x: 1500})
+            gsap.to(modalVar, {duration: .8, x: 3000})
+            
+            // attempting to get around slow entry without speeding up animation or using display: none ** could probably work with opacity.
+            // let vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
+            // let middleman = vw * 1.5
+            // let starting_pos = middleman - (middleman * 2)
+            // end_point = middleman
+            // gsap.fromTo(modalVar, { x: starting_pos}, { x: end_point, duration: 1 });
+
+
             return;
         }
         else 
@@ -86,9 +95,25 @@ fetch('biscuits.json')
 
     function modalExit() {
         let modalVar = document.querySelector('#modal-wrapper');
-        gsap.to(modalVar, {duration: 1.2, x: -1500})
-        // modalVar.style.display = 'none';
+        gsap.to(modalVar, {duration: 1.2, x: -3000})
+        // setTimeout(function () {
+        //     modalVar.style.display = 'none';
+        // }, 8000)
+        
     }
+
+
+
+
+
+
+
+
+    //about me load
+    function aboutMe() {
+        
+    }
+
 
     // <div id="modal-wrapper">
     // <div id="modal-content">

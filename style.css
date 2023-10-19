@@ -356,7 +356,7 @@ h1 {
     justify-content: center;
     align-items: center;
     display: flex;
-    right: 1500px;
+    right: 3000px;
 }
 
 #modal-content {
@@ -377,7 +377,9 @@ h1 {
     border-radius: 10px;
     
 }
-
+#modal-about {
+    max-width: 700px;
+}
 #modal-footer {
     float: bottom;
     width: 100%;
@@ -392,5 +394,17 @@ h1 {
     top: 5vh;
     right: 5vw;
 }
+
+button {
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+    
+}
+
 
 
