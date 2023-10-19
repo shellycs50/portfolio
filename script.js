@@ -1,5 +1,23 @@
 
 gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollToPlugin);
+async function pageOpen(){
+    // document.querySelector('.transition').style.display = 'flex';
+    gsap.to('.transition li', { duration: .01, opacity: 0 })
+    await delay(500)
+    gsap.to('.transition li', { duration: .01, width: 20, height: 60, })
+    await delay(10)
+    gsap.to('.transition li', { duration: .5, scaleY: 1, transformOrigin: 'bottom left', stagger: .2})
+    gsap.to('.transition li', { duration: .5, opacity: 1, transformOrigin: 'bottom left', stagger: .2})
+    await delay(500)
+    // hide
+    gsap.to('.transition li', { duration: .5, scaleY: 0, transformOrigin: 'bottom left', stagger: .1, delay: .1})
+    gsap.to('.transition li', { duration: .5, width: 0, height: 0, transformOrigin: 'bottom left'})
+    await delay(100)
+    gsap.to('.transition li', { duration: .1, width: 0, height: 0, transformOrigin: 'bottom left'})
+    await delay(50)
+    gsap.to('.transition li', { duration: .01, opacity: 100 })
+}
 
 // JSON HANDLING
 
@@ -118,7 +136,9 @@ fetch('biscuits.json')
 
     async function pageTransition(){
         // document.querySelector('.transition').style.display = 'flex';
-        gsap.to('.transition li', { duration: .01, width: 100, height: 100, })
+        //place items
+        gsap.to('.transition li', { duration: 0, opacity: 0, transformOrigin: 'bottom left', stagger: .2})
+        gsap.to('.transition li', { duration: .01, width: 20, height: 60, })
         await delay(10)
         gsap.to('.transition li', { duration: .5, scaleY: 1, transformOrigin: 'bottom left', stagger: .2})
         gsap.to('.transition li', { duration: .5, opacity: 1, transformOrigin: 'bottom left', stagger: .2})
@@ -126,7 +146,8 @@ fetch('biscuits.json')
         // hide
         gsap.to('.transition li', { duration: .5, scaleY: 0, transformOrigin: 'bottom left', stagger: .1, delay: .1})
         gsap.to('.transition li', { duration: .5, width: 0, height: 0, transformOrigin: 'bottom left'})
-        await delay(1000)
+        gsap.to('.transition li', { duration: .5, opacity: 0, transformOrigin: 'bottom left', stagger: .2})
+        await delay(100)
         gsap.to('.transition li', { duration: .1, width: 0, height: 0, transformOrigin: 'bottom left'})
     }
 
@@ -147,6 +168,9 @@ fetch('biscuits.json')
 
             async enter(data) {
                 // portfolioFill(); //this is bad. it needs to be called only when getting index, not when getting about or contact.
+            },
+            async beforeOnce(data) {
+                pageOpen();
             }
         }],
 
@@ -160,6 +184,14 @@ fetch('biscuits.json')
             afterEnter(data) {
                 about_jank();
               }
+            }, {
+                namespace: 'contact',
+                afterEnter(data) {
+                    about_jank();
+                    document.querySelector('#contact-form').addEventListener('submit', (e) => {
+                        e.preventDefault();
+                    })
+                  }
           }]
     })
 // for some reason delaying 1 ms makes the anim work? 
@@ -175,7 +207,18 @@ fetch('biscuits.json')
  }
 
 
+// hook for getting to the top of page: 
 
+barba.hooks.enter((data) => {
+    console.log(data.next.namespace);
+    //scroll to 400 pixels down from the top
+    async function scrollski() {
+        gsap.to(window, { duration: .01, scrollTo: 100 });
+        await delay(10)
+        gsap.to(window, { duration: .2, scrollTo: 0 });
+    }
+    scrollski();
+  });
 
     //about me load
     function aboutMe() {
@@ -219,8 +262,6 @@ function submitHandler() {
 
 
 // BEGINNING OF GSAP, SCROLLTRIGGER ETC. 
-
-
 
 
 
@@ -275,7 +316,7 @@ let headerBg = document.querySelector('#hd-bg');
 let title2 = document.querySelector('#title-2')
 
 gsap.from(title2, {duration: 1.5, y: -50, opacity: 0})
-
+const tmlnr = gsap.timeline()
 // working to function -> fades out 
 gsap.to(headerBg, { scrollTrigger: {trigger: '.fade-trigger', start: 'top center', end: 'top center', toggleActions: 'play none reverse none'},
  opacity: 0});
