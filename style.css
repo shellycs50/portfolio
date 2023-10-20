@@ -88,6 +88,12 @@ div, p {
     pointer-events: none;
 }
 
+@media screen and (max-width: 600px) {
+    .header-background {
+        height: 50vw;
+    }
+}
+
 
 h1 {
     font-family: 'Monument';
@@ -124,6 +130,7 @@ h1 {
     position: relative;
     z-index: 6;
     max-width: 100%;
+    overflow: visible;
 
 }
 
@@ -134,6 +141,7 @@ h1 {
     position: relative;
     z-index: 6;
     max-width: 100%;
+    overflow: visible;
 }
 
 .main-background {
@@ -225,12 +233,18 @@ h1 {
 }
 
 #portfolio-background {
-    margin-top: 500px;
+    margin-top: 10vw;
     display: block;
     text-align: center;
     background: linear-gradient(to top, transparent, #161616),
     url(images/sky-light.jpg);
     z-index: 3;
+}
+
+@media screen and (max-width: 1200px){
+    #portfolio-background {
+        margin-top: 10vw;
+    }
 }
 
 /* portfolio rows and columns */
@@ -341,7 +355,7 @@ h1 {
 
 #footer {
     padding: 20px 0px 20px 0px;
-    border-right:2px #DCFC37 solid;
+    /* border-right:2px #DCFC37 solid; */
 }
 
 @media screen and (max-width: 500px){
@@ -653,5 +667,28 @@ ul.transition {
     margin-right: .5vw;
     font-size: 1vw;
     color: #DCFC37;
+}
+
+
+@media screen and (max-width: 800px)
+{
+    div .titles {
+        margin-bottom: 200px;
+    }
+}
+
+
+@media screen and (max-width: 700px)
+{
+    div .titles {
+        margin-bottom: 100px;
+    }
+}
+
+@media screen and (max-width: 500px)
+{
+    div .titles {
+        margin-bottom: 100px;
+    }
 }
 

@@ -87,7 +87,7 @@ fetch('biscuits.json')
             document.querySelector('#modal-title').textContent = biscuit.name;
             document.querySelector('#modal-about').textContent = biscuit.desc;
             document.querySelector('#modal-img').src = biscuit.img;
-            document.querySelector('#modal-footer').innerHTML = `<a href="${biscuit.wikipedia} target="_blank"><i class="fa-brands fa-github"></i></a><a target="_blank" href="${biscuit.wikipedia}"><i class="fa-brands fa-sith"></i></a><a target="_blank" href="${biscuit.wikipedia}"><i class="fa-solid fa-ghost"></i></footer>`
+            document.querySelector('#modal-footer').innerHTML = `<a href="${biscuit.wikipedia}" target="_blank"><i class="fa-brands fa-github"></i></a><a target="_blank" href="${biscuit.wikipedia}"><i class="fa-brands fa-sith"></i></a><a target="_blank" href="${biscuit.wikipedia}"><i class="fa-solid fa-ghost"></i></footer>`
             // document.querySelector('#modal-wrapper').style.display = 'flex';
             let modalVar = document.querySelector('#modal-wrapper');
             gsap.to(modalVar, {duration: .8, x: 3000})
@@ -212,9 +212,24 @@ fetch('biscuits.json')
 
  async function keyboard_spin() {
     
-    gsap.to('#spinning-logo', {duration: 1.3, rotation: 360, repeat: -1});
-    await delay(1000)
-    keyboard_spin()
+    // gsap.to('#spinning-logo', {duration: .5, rotation: 360, repeat: -1});
+
+    // let tlmlry = gsap.timeline({    
+    //     scrollTrigger: {
+    //         trigger: '#spinning-logo',
+    //         start: '-1500% top',
+    //         end: '+1000% bottom',
+    //         scrub: true,
+    //         toggleActions: 'play pause reverse complete',
+    //     }
+    // })
+    // await delay(2)
+    // tlmlry.to('#spinning-logo', {
+       
+        
+    // })
+    // await delay(1000)
+    // keyboard_spin()
  }
 
 // hook for getting to the top of page: 
@@ -364,9 +379,11 @@ let title2 = document.querySelector('#title-2')
 gsap.from(title2, {duration: 1.5, y: -50, opacity: 0})
 const tmlnr = gsap.timeline()
 // working to function -> fades out 
-gsap.to(headerBg, { scrollTrigger: {trigger: '.fade-trigger', start: 'top center', end: 'top center', toggleActions: 'play none reverse none'},
+gsap.to(headerBg, { scrollTrigger: {trigger: '.fade-trigger', start: 'top center', end: 'center center', scrub: true, toggleActions: 'play none reverse none'},
  opacity: 0});
 }
+
+
 
 
 
