@@ -87,6 +87,7 @@ fetch('biscuits.json')
             document.querySelector('#modal-title').textContent = biscuit.name;
             document.querySelector('#modal-about').textContent = biscuit.desc;
             document.querySelector('#modal-img').src = biscuit.img;
+            document.querySelector('#modal-footer').innerHTML = `<a href="${biscuit.wikipedia} target="_blank"><i class="fa-brands fa-github"></i></a><a target="_blank" href="${biscuit.wikipedia}"><i class="fa-brands fa-sith"></i></a><a target="_blank" href="${biscuit.wikipedia}"><i class="fa-solid fa-ghost"></i></footer>`
             // document.querySelector('#modal-wrapper').style.display = 'flex';
             let modalVar = document.querySelector('#modal-wrapper');
             gsap.to(modalVar, {duration: .8, x: 3000})
@@ -144,11 +145,12 @@ fetch('biscuits.json')
         gsap.to('.transition li', { duration: .5, opacity: 1, transformOrigin: 'bottom left', stagger: .2})
         await delay(500)
         // hide
-        gsap.to('.transition li', { duration: .5, scaleY: 0, transformOrigin: 'bottom left', stagger: .1, delay: .1})
-        gsap.to('.transition li', { duration: .5, width: 0, height: 0, transformOrigin: 'bottom left'})
+        // gsap.to('.transition li', { duration: .5, scaleY: 0, transformOrigin: 'bottom left', stagger: .1, delay: .1})
+        // gsap.to('.transition li', { duration: .5, width: 0, height: 0, transformOrigin: 'bottom left'})
         gsap.to('.transition li', { duration: .5, opacity: 0, transformOrigin: 'bottom left', stagger: .2})
         await delay(100)
         gsap.to('.transition li', { duration: .1, width: 0, height: 0, transformOrigin: 'bottom left'})
+        gsap.to('.transition li', { duration: 0, opacity: 0, transformOrigin: 'bottom left', stagger: .2})
     }
 
 // call done after time with some safeguarding and snazz
@@ -178,6 +180,8 @@ fetch('biscuits.json')
             namespace: 'home',
             afterEnter(data) {
               home_jank();
+              keyboard_spin()
+              
             }
           }, {
             namespace: 'about',
@@ -206,6 +210,12 @@ fetch('biscuits.json')
     titleAnimation()
  }
 
+ async function keyboard_spin() {
+    
+    gsap.to('#spinning-logo', {duration: 1.3, rotation: 360, repeat: -1});
+    await delay(1000)
+    keyboard_spin()
+ }
 
 // hook for getting to the top of page: 
 
@@ -219,6 +229,23 @@ barba.hooks.enter((data) => {
     }
     scrollski();
   });
+
+
+    
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     //about me load
     function aboutMe() {
@@ -254,12 +281,31 @@ barba.hooks.enter((data) => {
 //form submit 
 
 function submitHandler() {
-    window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    window.open("https://media.tenor.com/AVgp2MWVZv4AAAAd/did-we-just-become-best-friends-did-we-just-become-best-friends-meme.gif")
+}
+
+//aweomse function to redirect to random new page that ISNT the current page
+
+function burgerHasBeenClicked(){
+    console.log('bURGAH')
+    let options = ['index.html', 'about.html', 'contact.html']
+    let destination = Math.floor(Math.random() * 3)
+    let location = window.location.href.slice(options[destination].length - (options[destination].length * 2)) //in the case that url match, slice down so comparison works.
+    if (location == options[destination]) {
+        burgerHasBeenClicked();
+        return;
+    }
+    else {
+        console.log(`location: ${location} --- query: ${options[destination]}`)
+        window.location.href = options[destination]
+    }
+    
 }
 
 
-
-
+function possiblyYou(){
+    window.open ('https://media.tenor.com/IdPyq7eZoIAAAAPo/possibly-step-brothers.mp4')
+}
 
 // BEGINNING OF GSAP, SCROLLTRIGGER ETC. 
 

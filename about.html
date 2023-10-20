@@ -43,10 +43,10 @@
             
         <div id="navbar-content">
             <a href="index.html">ROB</a>
-            <a href="https://github.com/shellycs50" class="nomobile">GITHUB</a>
+            <a href="https://github.com/shellycs50" target="_blank" class="nomobile">GITHUB</a>
             <a href="about.html" class="nomobile">ABOUT ME</a>
             <a href="contact.html" class="nomobile">CONTACT</a>
-            <i id="dropdown" class="fa-solid fa-bars"></i>
+            <a onclick="burgerHasBeenClicked()"><i id="dropdown" class="fa-solid fa-bars"></i></a>
         </div>
        
         <div data-barba="container" data-barba-namespace="about">
@@ -70,7 +70,7 @@
        <div class="about-row">
             <div class="about-col">
                 <div class="about-box">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum possimus dolore, laborum rerum eius culpa! Magni sapiente in deserunt explicabo.</p>
+                    <p><span id="highlighted">Lorem</span> ipsum dolor sit amet consectetur adipisicing elit. Eum possimus dolore, laborum rerum eius culpa! Magni sapiente in deserunt explicabo.</p>
                 </div>
                 <div class="about-box">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum maiores, repudiandae eveniet ratione dolorem obcaecati?</p>
@@ -80,7 +80,7 @@
        <div class="about-row">
         <div class="about-col">
             <div class="about-box">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde nisi velit sit?</p>
+                <p><span id="highlighted">Lorem</span> ipsum dolor sit amet consectetur adipisicing elit. Unde nisi velit sit?</p>
             </div>
             <div class="about-box">
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam, neque architecto earum quibusdam eos laborum officia qui?</p>
