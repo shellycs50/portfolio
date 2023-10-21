@@ -181,12 +181,14 @@ fetch('biscuits.json')
             afterEnter(data) {
               home_jank();
               keyboard_spin()
+              burgerMightBeClicked();
               
             }
           }, {
             namespace: 'about',
             afterEnter(data) {
                 about_jank();
+                burgerMightBeClicked();
               }
             }, {
                 namespace: 'contact',
@@ -195,6 +197,7 @@ fetch('biscuits.json')
                     document.querySelector('#contact-form').addEventListener('submit', (e) => {
                         e.preventDefault();
                     })
+                    burgerMightBeClicked();
                   }
           }]
     })
@@ -301,18 +304,20 @@ function submitHandler() {
 
 //aweomse function to redirect to random new page that ISNT the current page
 
-function burgerHasBeenClicked(){
+function burgerMightBeClicked(){
     console.log('bURGAH')
     let options = ['index.html', 'about.html', 'contact.html']
     let destination = Math.floor(Math.random() * 3)
     let location = window.location.href.slice(options[destination].length - (options[destination].length * 2)) //in the case that url match, slice down so comparison works.
     if (location == options[destination]) {
-        burgerHasBeenClicked();
+        burgerMightBeClicked();
         return;
     }
     else {
         console.log(`location: ${location} --- query: ${options[destination]}`)
-        window.location.href = options[destination]
+        let burg = document.querySelector('#burger')
+        burg.href = options[destination]
+        // window.location.href = options[destination]
     }
     
 }
