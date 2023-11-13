@@ -1,123 +1,32 @@
 {
     "biscuits": [
       {
-        "name": "Digestive",
-        "img": "https://s3-us-west-1.amazonaws.com/contentlab.studiod/getty/d05662cfb32042c9894dddf8ed73ce22.jpg",
+        "name": "Book Swap",
+        "img": "https://i1.pickpik.com/photos/335/467/685/book-old-pile-stack-preview.jpg",
         "RDT": 5,
-        "desc": "A digestive biscuit, sometimes described as a sweet-meal biscuit, is a semi-sweet biscuit that originated in Scotland. The digestive was first developed in 1839 by two Scottish doctors to aid digestion.",
-        "wikipedia":"https://en.wikipedia.org/wiki/Digestive_biscuit"
+        "desc": "In a Scrum Team, we built a FrontEnd React App allowing users to borrow, return and add new books via fetch with a pre-built API. I worked on or contributed to most if not all of the stories in the project.",
+        "wikipedia":"https://github.com/iO-Academy/23-sept-sarcasticfringeheads-bookswap-fe"
       },
       {
-        "name": "Hobnob",
-        "img": "https://upload.wikimedia.org/wikipedia/commons/9/95/Hobnobs.jpg",
+        "name": "Finance",
+        "img": "https://cs50.harvard.edu/x/2020/tracks/web/finance/finance.png",
         "RDT": 5,
-        "desc": "Hobnobs is the brand name of a commercial biscuit. They are made from rolled oats and jumbo oats, similar to a flapjack-digestive biscuit hybrid, and are among the most popular British biscuits. McVitie's launched Hobnobs in 1985 and a milk chocolate variant in 1987.",
-        "wikipedia":"https://en.wikipedia.org/wiki/Hobnob_biscuit"
+        "desc": "As part of CS50 Problem Set 9, I built a modest frontend with Bootstrap and a backend with sqlite3 and flask to communicate with a live stock price API - allowing users to make secure accounts, buy and sell stocks at real world prices, and other features.",
+        "wikipedia":"https://github.com/shellycs50/cs50finance/"
       },
       {
-        "name": "Malted Milk",
-        "img": "https://www.telegraph.co.uk/content/dam/food-and-drink/2016/05/26/20_Malts_trans_NvBQzQNjv4BqqVzuuqpFlyLIwiB6NTmJwfSVWeZ_vEN7c6bHu2jJnT8.jpg?imwidth=450",
+        "name": "WAV Reverse Algorithm",
+        "img": "https://fxhome.com/wp-content/uploads/2022/04/ReverseAudio-2.jpg",
         "RDT": 6,
-        "desc": "The malted milk is a type of biscuit, first produced by Elkes Biscuits of Uttoxeter (now owned by Fox's Biscuits) in 1924. They are named after their malt flavouring and milk content.",
-        "wikipedia":"https://en.wikipedia.org/wiki/Malted_milk_(biscuit)"
+        "desc": "A personal favourite from CS50, I wrote an algorithm to reverse WAV files, using a nested for loop to swap data chunks while maintaining the file's original stereo image.",
+        "wikipedia":"https://github.com/shellycs50/cs50reverse"
       },
       {
-        "name": "Ginger Nut",
-        "img": "https://peasepudding.files.wordpress.com/2010/05/gingernut.jpg",
+        "name": "This Portfolio Site",
+        "img": "https://images.unsplash.com/photo-1619280771206-d8330a0be617?q=80&w=1954&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "RDT": 3,
-        "desc": "A Ginger Nut is a globally popular biscuit flavoured with ginger. Ginger snaps are flavoured with powdered ginger and a variety of other spices, most commonly cinnamon, molasses and clove.",
-        "wikipedia":"https://en.wikipedia.org/wiki/Ginger_snap"
-      },
-      {
-        "name": "Fig Roll",
-        "img": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Fig-Newtons-Stacked.jpg",
-        "RDT": 4,
-        "desc": "The fig roll or fig bar is a cookie or biscuit consisting of a rolled cake or pastry filled with fig paste.",
-        "wikipedia":"https://en.wikipedia.org/wiki/Fig_roll"
-      },
-      {
-        "name": "Chocolate Digestive",
-        "img": "https://i.guim.co.uk/img/media/5a8429150cec3c15ea91652e6e080a1cbb0c9ba8/196_249_5452_3273/master/5452.jpg?width=700&quality=85&auto=format&fit=max&s=d60ac1a07b4f09ee5f38cd8f5437e1c6",
-        "RDT": 4,
-        "desc": "Digestive biscuits which are coated on the bottom with milk, dark or white chocolate are also available. Originally produced by McVitie's in 1925 in the UK as the Chocolate Homewheat Digestive, other varieties include the basic biscuit with chocolate shavings throughout, or a layer of caramel.",
-        "wikipedia":"https://en.wikipedia.org/wiki/Digestive_biscuit#Chocolate_digestives"
-      },
-      {
-        "name": "Chocolate Hobnob",
-        "img": "https://i2-prod.mirror.co.uk/incoming/article3614584.ece/ALTERNATES/s615/Two-Chocolate-Hobnobs.jpg",
-        "RDT": 9,
-        "desc": "Hobnobs is the brand name of a commercial biscuit. They are made from rolled oats and jumbo oats, similar to a flapjack-digestive biscuit hybrid, and are among the most popular British biscuits. McVitie's launched Hobnobs in 1985 and a milk chocolate variant in 1987.",
-        "wikipedia":"https://en.wikipedia.org/wiki/Hobnob_biscuit"
-      },
-      {
-        "name": "Rich Tea",
-        "img": "http://www.freeimageslive.com/galleries/food/dessert/pics/foodbiscuit00061g.jpg",
-        "RDT": 4,
-        "desc": "Rich tea is a type of sweet biscuit; the ingredients generally include wheat flour, sugar, vegetable oil and malt extract. Originally called Tea Biscuits, they were developed in the 17th century in Yorkshire, England for the upper classes as a light snack between full-course meals.",
-        "wikipedia":"https://en.wikipedia.org/wiki/Rich_Tea"
-      },
-      {
-        "name": "Custard Cream",
-        "img": "https://d11fdyfhxcs9cr.cloudfront.net/templates/184807/myimages/custard_cream_1.jpg",
-        "RDT": 8,
-        "desc": "A custard cream is a type of sandwich biscuit popular in the United Kingdom and Republic of Ireland filled with a creamy, custard-flavoured centre. Traditionally, the filling was buttercream but nowadays cheaper fats have replaced butter in mass-produced biscuits.",
-        "wikipedia":"https://en.wikipedia.org/wiki/Custard_cream"
-      },
-      {
-        "name": "Jammie Dodger",
-        "img": "http://ichef.bbci.co.uk/news/976/cpsprodpb/168D8/production/_88667329_alamy_jammie976.jpg",
-        "RDT": 8,
-        "desc": "Jammie Dodgers are a popular British biscuit, made from shortbread with a raspberry or strawberry flavoured jam filling. They are currently produced by Burton's Biscuit Company at its factory in Llantarnam. In 2009, Jammie Dodgers were the most popular children's sweet biscuit brand in the United Kingdom, with 40% of the year's sales consumed by adults.",
-        "wikipedia":"https://en.wikipedia.org/wiki/Jammie_Dodgers"
-      },
-      {
-        "name": "Cheeseburger Flavour Mac 'N' Cheese",
-        "img": "https://marshallsfoods.com/wp-content/uploads/marshalls-cheesey-cheeseburger-mac-n-cheese.png",
-        "RDT": 11,
-        "desc": "Hells yeah.",
-        "wikipedia":"https://en.wikipedia.org/wiki/Shortbread"
-      },
-      {
-        "name": "Bourbon",
-        "img": "http://3.bp.blogspot.com/-iubUP6LCPfM/U--ECQ-u_JI/AAAAAAAAK14/OpLgWbiPiow/s1600/bourbons.jpg",
-        "RDT": 7,
-        "desc": "The Bourbon biscuit is a sandwich style biscuit consisting of two thin rectangular dark chocolate-flavoured biscuits with a chocolate buttercream filling.",
-        "wikipedia":"https://en.wikipedia.org/wiki/Bourbon_biscuit"
-      },
-      {
-        "name": "Oreo",
-        "img": "https://www.charlottefive.com/wp-content/uploads/2015/04/IMG_Double-Stuf-Oreos.jp_2_1_ND4EKC52_L115580036-e1428411690723.jpg",
-        "RDT": 3,
-        "desc": "Oreo is an American sandwich cookie consisting of two (usually chocolate) wafers with a sweet crème filling. Introduced on March 6, 1912, Oreo is the best selling cookie brand in the United States.",
-        "wikipedia":"https://en.wikipedia.org/wiki/Oreo"
-      },
-      {
-        "name": "Nice",
-        "img": "https://i.dailymail.co.uk/i/pix/2017/10/24/09/45A04E4400000578-5011415-image-a-1_1508832107666.jpg",
-        "RDT": 4,
-        "desc": "A Nice biscuit is a plain or coconut-flavoured biscuit. It is thin, rectangular in shape, with rounded bumps on the edges, and lightly covered with a scattering of large sugar crystals, often with the word 'NICE' imprinted on top in sans-serif capital letters.",
-        "wikipedia":"https://en.wikipedia.org/wiki/Nice_biscuit"
-      },
-      {
-        "name": "Party Ring",
-        "img": "https://slummysinglemummy.com/wp-content/uploads/2018/04/DSC_0054.jpg",
-        "RDT": 5,
-        "desc": "The party ring is a British biscuit first made by Fox's Biscuits in 1983.[1] It is a circular biscuit with a central finger-sized hole. On top of this is a layer of hard, coloured icing with 'wiggly' lines in a different colour.",
-        "wikipedia":"https://en.wikipedia.org/wiki/Fox%27s_Biscuits"
-      },
-      {
-        "name": "Garibaldi",
-        "img": "http://everybodylikessandwiches.com/app/uploads/2014/07/biscuits7.jpg",
-        "RDT": 5,
-        "desc": "The Garibaldi biscuit consists of currants squashed and baked between two thin oblongs of biscuit dough—a sort of currant sandwich. The biscuits are similar to Eccles cake as well as the Golden Raisin Biscuits once made by Sunshine Biscuits.",
-        "wikipedia":"https://en.wikipedia.org/wiki/Garibaldi_biscuit"
-      },
-      {
-        "name": "Choc Chip Cookie",
-        "img": "https://pediaa.com/wp-content/uploads/2015/12/Difference-Between-Cookies-and-Biscuits-image-1-1024x680.jpg",
-        "RDT": 6,
-        "desc": "A chocolate chip cookie is a drop cookie that features chocolate chips or chocolate morsels as its distinguishing ingredient. Chocolate chip cookies originated in the United States around 1938, when Ruth Graves Wakefield chopped up a Nestlé semi-sweet chocolate bar and added the chopped chocolate to a cookie recipe.",
-        "wikipedia":"https://en.wikipedia.org/wiki/Chocolate_chip_cookie"
+        "desc": "Fourth week project at iO Academy. I built a template portfolio website, that modestly utilises Barba.js, GSAP and ScrollTrigger to add visual appeal. Project information is fetched from a JSON as a teaching exercise. ",
+        "wikipedia":"https://github.com/shellycs50/portfolio"
       }
     ]
-  }
+    }

@@ -50,10 +50,10 @@ fetch('biscuits.json')
                     portfolio_content += `</div>`
                     portfolio_content += `<div class="col">`
                         portfolio_content += `<h3>${biscuit.name}</h3>`
-                        portfolio_content += `<p> ${biscuit.desc.slice(0, 60)}</p>`
+                        portfolio_content += `<p>${biscuit.desc}</p>`
                         portfolio_content += `<div class="portfolio-link">`
-                            portfolio_content += `<a href="${biscuit.wikipedia}"><i class="fa-brands fa-github"></i></a>`
-                            portfolio_content += `<a href="${biscuit.wikipedia}"><i class="fa-regular fa-eye"></i></a>`
+                            portfolio_content += `<a href="${biscuit.wikipedia}" target="_blank"><p>Github</p><i class="fa-brands fa-github"></i></a>`
+                            // portfolio_content += `<a href="${biscuit.wikipedia}"><i class="fa-regular fa-eye"></i></a>`
                         portfolio_content += `</div>`
                     portfolio_content += `</div>`
                 portfolio_content += `</div>`
@@ -87,7 +87,7 @@ fetch('biscuits.json')
             document.querySelector('#modal-title').textContent = biscuit.name;
             document.querySelector('#modal-about').textContent = biscuit.desc;
             document.querySelector('#modal-img').src = biscuit.img;
-            document.querySelector('#modal-footer').innerHTML = `<a href="${biscuit.wikipedia}" target="_blank"><i class="fa-brands fa-github"></i></a><a target="_blank" href="${biscuit.wikipedia}"><i class="fa-brands fa-sith"></i></a><a target="_blank" href="${biscuit.wikipedia}"><i class="fa-solid fa-ghost"></i></footer>`
+            document.querySelector('#modal-footer').innerHTML = `<a href="${biscuit.wikipedia}" target="_blank">Github<i class="fa-brands fa-github"></i></a></footer>`
             // document.querySelector('#modal-wrapper').style.display = 'flex';
             let modalVar = document.querySelector('#modal-wrapper');
             gsap.to(modalVar, {duration: .8, x: 3000})

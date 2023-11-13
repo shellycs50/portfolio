@@ -1,3 +1,14 @@
+/* :root {
+    --quattro: font-family: 'Pixelify Sans', sans-serif;
+    font-family: 'Quattrocento', serif;
+    wont work in this case, may have to make a class with fonts instead
+    --lora: font-family: 'Lora', serif;
+    font-family: 'Pixelify Sans', sans-serif;
+    font-family: 'Quattrocento', serif;
+
+} */
+
+/* monument */
 
 @font-face {
     font-family: "Monument";
@@ -13,7 +24,6 @@ body {
     height: 100%;
     color: #ffff;
     background-color: #161616;
-    
     
     
 }
@@ -70,7 +80,7 @@ div, p {
 
 .header-background {
     /* background: linear-gradient(rgba(0, 0, 0, 0.11), rgba(148, 148, 148, 0.5)), url('images/concrete-dark.jpg'); */
-    background: linear-gradient(to bottom, transparent, #161616),
+    background: linear-gradient(to top, transparent, #0000),
     url(images/concrete-dark.jpg);
     /* doesnt work because its to the bottom of the img not to the bottom of whats visible in the background. */
     /* background-image: url(concrete-dark.jpg); */
@@ -86,12 +96,6 @@ div, p {
     position: fixed;
     z-index: 1;
     pointer-events: none;
-}
-
-@media screen and (max-width: 600px) {
-    .header-background {
-        height: 50vw;
-    }
 }
 
 
@@ -130,7 +134,6 @@ h1 {
     position: relative;
     z-index: 6;
     max-width: 100%;
-    overflow: visible;
 
 }
 
@@ -141,13 +144,12 @@ h1 {
     position: relative;
     z-index: 6;
     max-width: 100%;
-    overflow: visible;
 }
 
 .main-background {
     width: 100%;
     background-color: #161616;
-    margin-top: 0;
+    margin-top: 20vh;
     /* broken but ideal usage if made to work */
     /* margin-top: calc((100vw / 100vh) * 100); */
     position: relative;
@@ -156,22 +158,9 @@ h1 {
     justify-content: center;
     align-items: center;
 }
-
-@media screen and (max-width: 800px)
-{
-    .main-background {
-        margin-top: 0vh;
-    }
-    #halfvw {
-        width: 200vw;
-}
-.fade-trigger {
-    margin-top: 0px;
-}
-}
 /* BEYOND CHALKED NEEDS WORK OR SOMETHING CAUSE HOLY */
 #halfvw {
-    /* width: 200vw; */
+    width: 200vw;
 }
 #halfvw img {
     width: 80%; 
@@ -208,14 +197,7 @@ h1 {
     z-index: 6;
     max-width: 1000px;
 }
-@media screen and (max-width: 450px ) {
 
-    .bio {
-        max-width: 20ch;
-        font-size: 5vmin;
-    }
-
-}
 .bio i {
     display: inline-block;
     position: relative;
@@ -223,7 +205,7 @@ h1 {
     top: 1.9rem;
 }
 #spinning-logo {
-    display: inline-block;
+    display: inline;
     position: static;
     color: #DCFC37
 }
@@ -233,18 +215,12 @@ h1 {
 }
 
 #portfolio-background {
-    margin-top: 10vw;
+    margin-top: 500px;
     display: block;
     text-align: center;
     background: linear-gradient(to top, transparent, #161616),
     url(images/sky-light.jpg);
     z-index: 3;
-}
-
-@media screen and (max-width: 1200px){
-    #portfolio-background {
-        margin-top: 10vw;
-    }
 }
 
 /* portfolio rows and columns */
@@ -266,7 +242,6 @@ h1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 50%;
 }
 
 @media only screen and (max-width: 600px) {
@@ -319,37 +294,20 @@ h1 {
 .project-wrapper img {
     width:100%; 
     height:auto; 
-    max-width: 500px;
-    max-height: 500px;
-}
-.portfolio-link {
-    padding-top: 50px;
+    max-width: 40vw;
 }
 
-.portfolio-link a  {
+.portfolio-link a {
     color: white;
     font-size: 2rem;
-    padding: 0px 10px 0px 10px;
-}
-.portfolio-link a p {
-    font-size: 1.2rem;
-}
-.portfolio-link a i:hover, .portfolio-link a p:hover  {
-    transform: rotate(1deg)
+    padding: 0px 5px 0px 5px;
 }
 
 #space-evenly {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-}
-@media screen and (max-width: 750px) {
-    
-    #space-evenly {
-    flex-direction: column-reverse;
-    align-items: center;
-    gap: 5px;
-    }
+
 }
 
 #center {
@@ -360,15 +318,6 @@ h1 {
 
 #footer {
     padding: 20px 0px 20px 0px;
-    /* border-right:2px #DCFC37 solid; */
-}
-
-@media screen and (max-width: 500px){
-    #footer {
-        font-size: 4vw;
-        
-    }
-    
 }
 
 #footer a {
@@ -382,44 +331,19 @@ h1 {
     color: orange;
     /* border: 2px solid orange; */
     float: right;
-    font-weight: 600;
-    
 
 }
 #mini a {
     font-size: 1rem;
-    color: white;
+    color: orange;
     text-decoration: none;
 }
 
 .mini a i {
     font-size: 3rem;
     margin: 0px 10px 0px 10px;
-    color: #DCFC37;
+    color: rgba(255, 166, 0, 0.2);
 
-}
-
-#mini-about {
-    display: block;
-    font-size: 1rem;
-    color: #DCFC37;
-    float: none;
-    margin: 50px 0px 100px 0px;
-}
-
-#mini-about a {
-    font-size: 3rem;
-    color: #DCFC37;
-    text-decoration: none;
-    position: relative;
-    left: 1vw;
-}
-
-#jump-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    text-align: center;
 }
 
 #modal-wrapper {
@@ -451,9 +375,9 @@ h1 {
     gap: 30px;
     color: #DCFC37;
     background-color: rgba(0, 0, 0, 0.8);
-    border-radius: 10px;  
+    border-radius: 10px;
+    
 }
-
 #modal-about {
     max-width: 700px;
 }
@@ -462,26 +386,7 @@ h1 {
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: center;
-}
-
-#modal-footer a {
-    font-size: 3rem;
-    text-decoration: none;
-    color:#DCFC37;
-}
-@media screen and (max-width: 500px) {
-    #modal-footer a {
-        font-size: 7vw;
-    }
-}
-
-button:hover {
-    transform: rotate(.3deg)
-}
-
-#modal-footer a:hover, #modal-footer button:hover {
-    transform: rotate(-2deg)
+    justify-content: space-between;
 }
 
 #exit {
@@ -489,12 +394,6 @@ button:hover {
     font-size: 3rem;
     top: 5vh;
     right: 5vw;
-}
-
-@media screen and (max-width: 1300px ) {
-    #exit {
-        font-size: 5vw;
-    }
 }
 
 button {
@@ -513,10 +412,10 @@ ul.transition {
     display: flex;
     position: fixed;
     z-index: 25;
-    /* height: 100vh; */
-    width: 100vw; 
-    top: 3px;
-    left: 0px;
+    /* height: 100vh;
+    width: 100%; */
+    top: 0;
+    left: 0;
     margin: 0;
     pointer-events: none;
     opacity: 1;
@@ -530,11 +429,12 @@ ul.transition {
     
 }
 
+
 .about-background {
     display: block;
     width: 100%;
-    margin-top: 10vh;
-    margin-bottom: 10vh;
+    margin-top: 20vh;
+    
 }
 
 .about-row {
@@ -542,31 +442,7 @@ ul.transition {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-}
-#highlighted {
-    color:#DCFC37
-}
-
-.bio #highlighted a {
-    color:#DCFC37
-}
-
-@media screen and (max-width: 600px) {
-    .about-row {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-    }
-}
-/* contact form is of-about row */
-#contact-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 2px solid #0000;
-    border-radius: 5px;
-
+    
 }
 
 .about-col {
@@ -574,143 +450,23 @@ ul.transition {
     flex-direction: row;
     justify-content: space-around;
 }
-
-@media screen and (max-width: 600px) {
-    .about-col {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-    }
-}
-
 .about-box {
     border: 2px solid white;
     margin: 30px;
     padding: 20px;
     border-radius: 5px;
-    max-width: 33ch;
-    /* height: auto; */
-}
-#top {
-    border: 2px solid #DCFC37;
-    width: 50vw;
-    margin-bottom: 30px;
-    position: relative;
-    right: 5vw;
-    font-size: 2rem;
-}
-
-/* #top p {
-    width: 100%;
-    position: relative;
-    overflow:
-} */
-@media screen and (max-width: 600px) {
-    #top {
-        border: 2px solid #DCFC37;
-        width: 50vw;
-        margin-bottom: 30px;
-        position: relative;
-        right: 5vw;
-        font-size: 5vw;
-    }
 }
 
 
-.about-box input {
-    /* text-decoration: none; */
-    color:  #0000;
-    
-}
-
-.contacters {
-    margin: 30px;
-}
-
-.contacters input {
-    width: 100%;
-    text-decoration: none;
-    font: inherit;
-}
-.contacters textarea {
-    width: 30vw;
-    height: 30vh;
-}
-
-#textme {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-}
-
-#emailme {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-}
-
-.contacters textarea {
-    font-size: 2rem;
-    font: inherit;
-    
-}
-
-#contact-form-69 {
-    border: 2px solid #DCFC37;
-    border-bottom: none;
-    background: linear-gradient(to bottom, transparent, #161616),
-    url("https://www.transparenttextures.com/patterns/asfalt-light.png");
-/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
-}
-
-#spinning-cog {
-    margin-right: .5vw;
-    font-size: 1vw;
-    color: #DCFC37;
-}
-
-
-@media screen and (max-width: 800px)
-{
-    div .titles {
-        margin-bottom: 200px;
-    }
-}
-
-
-@media screen and (max-width: 700px)
-{
-    div .titles {
-        margin-bottom: 100px;
-    }
-}
-
-@media screen and (max-width: 600px)
-{
-    div .titles {
-        margin-bottom: 100px;
-        margin-top: 50px;
-    }
-}
 /* 
-#burger i {
-    padding-top: .2rem;
-    font-size: 2rem;
-   
-} */
-
-@media screen and (max-width: 600px) {
-    #navbar-content a {
-        font-size: 2rem;
-    }
-    #navbar-content {
-        padding: 20px 40px 20px 40px;
-        background: linear-gradient(to bottom, black, transparent 100%);
-    }
-
-    
-}
+<div class="about-background fade-trigger">
+       <div class="about-row">
+            <div class="about-col">
+                <div class="about-box">
+                    <p>box</p>
+                </div>
+                <div class="about-box">
+                    <p>box</p>
+                </div>
+            </div>
+       </div> */
