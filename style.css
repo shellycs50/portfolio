@@ -317,6 +317,7 @@ h1 {
     flex-direction: row;
     justify-content: center;
     padding: 30px;
+    margin-bottom: 7vh;
 }
 #portfolio-content {
     display: flex;
@@ -355,9 +356,9 @@ h1 {
     color: #DCFC37;
     font-size: 1.3rem;
     padding: 0px 10px 0px 10px;
-    background-color: rgba(0, 0, 0, 0.3);
-    
-    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* background-image: url(images/eberhard-grossgasteiger-J9NDmBVhN04-unsplash.jpg); */
+    padding: 12px;
     border-radius: 5px;
 }
 
@@ -790,5 +791,11 @@ ul.transition {
         background: linear-gradient(to bottom, black, transparent 100%);
     }
 
+    
+}
+
+.about-background {
+   background-image: linear-gradient(to bottom, rgba(0,0,0, 0.9), rgba(211, 42, 42, 0.5)),
+    url('images/sky-light.jpg');
     
 }

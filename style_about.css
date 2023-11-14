@@ -434,7 +434,6 @@ ul.transition {
     display: block;
     width: 100%;
     margin-top: 20vh;
-    
 }
 
 .about-row {
@@ -442,6 +441,7 @@ ul.transition {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    background-image: url(images/eberhard-grossgasteiger-J9NDmBVhN04-unsplash.jpg);
     
 }
 
