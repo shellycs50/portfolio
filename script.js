@@ -37,7 +37,6 @@ fetch('biscuits.json')
     .then(res => res.json())
     .then(data => {
         data.biscuits.forEach(function (biscuit) {
-            console.log(biscuit.name)
             //**condition for testing */
             // if (biscuit.name != 'Digestive')
             // {
@@ -72,17 +71,13 @@ fetch('biscuits.json')
     //modal functionality
 
     function modalOpen(id) {
-        console.log(`opened ${id}`)
         let name = id.substring(0, id.length - 5)
-        console.log(name)
-
         fetch('biscuits.json')
     .then(res => res.json())
     .then(data => { data.biscuits.forEach(function (biscuit) //this is inefficient and defeats (a part of) the purpose of having a JSON, but it works. 
         {
             if (biscuit['name'] == name)
         {
-            console.log('found')
             //fill modal with content and open modal
             document.querySelector('#modal-title').textContent = biscuit.name;
             document.querySelector('#modal-about').textContent = biscuit.desc;
@@ -104,7 +99,7 @@ fetch('biscuits.json')
         }
         else 
         {
-            console.log('not found')
+            console.log('Info not found. Please refresh page to restore functionality until I address this bug.')
         }
 
         }) //end of data
@@ -238,7 +233,6 @@ fetch('biscuits.json')
 // hook for getting to the top of page: 
 
 barba.hooks.enter((data) => {
-    console.log(data.next.namespace);
     //scroll to 400 pixels down from the top
     async function scrollski() {
         gsap.to(window, { duration: .01, scrollTo: 100 });
@@ -305,7 +299,6 @@ function submitHandler() {
 //aweomse function to redirect to random new page that ISNT the current page
 
 function burgerMightBeClicked(){
-    console.log('bURGAH')
     let options = ['index.html', 'about.html', 'contact.html']
     let destination = Math.floor(Math.random() * 3)
     let location = window.location.href.slice(options[destination].length - (options[destination].length * 2)) //in the case that url match, slice down so comparison works.
