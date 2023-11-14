@@ -52,7 +52,7 @@ fetch('biscuits.json')
                         portfolio_content += `<h3>${biscuit.name}</h3>`
                         portfolio_content += `<p>${biscuit.desc}</p>`
                         portfolio_content += `<div class="portfolio-link">`
-                            portfolio_content += `<a href="${biscuit.wikipedia}" target="_blank"><p>Github</p><i class="fa-brands fa-github"></i></a>`
+                            portfolio_content += `<a href="${biscuit.wikipedia}" target="_blank">Github<i class="fa-brands fa-github"></i></a>`
                             // portfolio_content += `<a href="${biscuit.wikipedia}"><i class="fa-regular fa-eye"></i></a>`
                         portfolio_content += `</div>`
                     portfolio_content += `</div>`

@@ -327,15 +327,23 @@ h1 {
 }
 
 .portfolio-link a  {
-    color: white;
-    font-size: 2rem;
+    color: #DCFC37;
+    font-size: 1.3rem;
     padding: 0px 10px 0px 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+    
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.portfolio-link a:hover  {
+    transform: rotate(1deg);
 }
 .portfolio-link a p {
     font-size: 1.2rem;
 }
 .portfolio-link a i:hover, .portfolio-link a p:hover  {
-    transform: rotate(1deg)
+    transform: rotate(10deg)
 }
 
 #space-evenly {
@@ -377,23 +385,26 @@ h1 {
 }
 
 .mini {
-    display: block;
-    font-size: 1rem;
+    display: inline;
+    font-size: inherit;
     color: orange;
     /* border: 2px solid orange; */
-    float: right;
-    font-weight: 600;
+    
+    font-weight: inherit;
     
 
 }
 #mini a {
-    font-size: 1rem;
+    font-size: inherit;
     color: white;
     text-decoration: none;
 }
 
 .mini a i {
-    font-size: 3rem;
+    font-size: 2rem;
+    display: inline-block;
+    position: relative;
+    top: 15px;
     margin: 0px 10px 0px 10px;
     color: #DCFC37;
 
@@ -542,12 +553,29 @@ ul.transition {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-}
-#highlighted {
-    color:#DCFC37
+    font-size: 1.3rem;
 }
 
-.bio #highlighted a {
+#contact-col {
+    flex-direction: column;
+}
+#highlighted {
+    color:#DCFC37;
+    
+    
+}
+#column-center {
+    width: 50%;
+}
+
+#highlighted2 {
+    color:#DCFC37;
+    background: black;
+    padding-bottom: 10px;
+    border-radius: 5px;
+}
+
+.bio #highlighted2 a {
     color:#DCFC37
 }
 
@@ -573,6 +601,7 @@ ul.transition {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    text-align: center;
 }
 
 @media screen and (max-width: 600px) {
