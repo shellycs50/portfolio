@@ -97,10 +97,6 @@ fetch('biscuits.json')
 
             return;
         }
-        else 
-        {
-            console.log('Info not found. Please refresh page to restore functionality until I address this bug.')
-        }
 
         }) //end of data
         
