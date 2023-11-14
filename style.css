@@ -584,10 +584,9 @@ ul.transition {
 #contact-col {
     flex-direction: column;
 }
+
 #highlighted {
-    color:#DCFC37;
-    
-    
+    color:#DCFC37; 
 }
 #column-center {
     width: 50%;
