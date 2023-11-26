@@ -11,22 +11,32 @@
         "name": "Finance",
         "img": "https://cs50.harvard.edu/x/2020/tracks/web/finance/finance.png",
         "RDT": 5,
-        "desc": "As part of CS50 Problem Set 9, I built a modest frontend with Bootstrap and a backend with sqlite3 and flask to communicate with a live stock price API - allowing users to make secure accounts, buy and sell stocks at real world prices, and other features.",
+        "desc": "When a user registers, they are given a virtual $10,000 to start their investment journey. They can look up real-time stock prices, 'buy' stocks by specifying the symbol and number of shares, and these transactions are recorded in their history. If they decide to 'sell' their stocks later, the current price of the stock is used to calculate their returns. Implemented using Python, Flask, HTML, and SQL.",
         "wikipedia":"https://github.com/shellycs50/cs50finance/"
+      },
+      {
+        "name": "Tideman Election Simulator",
+        "img": "https://cs50.harvard.edu/x/2023/psets/3/no_condorcet_1.png",
+        "RDT": 6,
+        "desc": "Instead of simply counting votes, the Tideman method uses a 'ranked pairs' or 'Tideman' method. This involves comparing every pair of candidates: for each pair, the candidate preferred by more voters wins that 'matchup'. The candidate who wins the most matchups is the winner of the election. The challenge was dealing with complexities like handling ties and cycles (where A beats B, B beats C, but C beats A).",
+        "wikipedia":"https://github.com/shellycs50/tideman/"
       },
       {
         "name": "WAV Reverse Algorithm",
         "img": "https://fxhome.com/wp-content/uploads/2022/04/ReverseAudio-2.jpg",
         "RDT": 6,
-        "desc": "A personal favourite from CS50, I wrote an algorithm to reverse WAV files, using a nested for loop to swap data chunks while maintaining the file's original stereo image.",
+        "desc": "Reverse a Wav file. Simple, just go into Logic Pro and click reverse! The challenge here was to understand how wav files are structured. They contain a header with information about the file (like the sample rate and the number of channels), followed by the actual audio data. The program reads a wav file, reverses the order of the audio data (which makes the audio play backwards), and writes the reversed audio data back into a new wav file, while leaving the header intact.",
         "wikipedia":"https://github.com/shellycs50/cs50reverse"
       },
       {
-        "name": "This Portfolio Site",
+        "name": "Portfolio Site",
         "img": "https://images.unsplash.com/photo-1619280771206-d8330a0be617?q=80&w=1954&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "RDT": 3,
-        "desc": "Fourth week project at iO Academy. I built a template portfolio website, that modestly utilises Barba.js, GSAP and ScrollTrigger to add visual appeal. Project information is fetched from a JSON as a teaching exercise. ",
+        "desc": "Yes! I made this site. The challenge was learning Barba.js, GSAP and ScrollTrigger in the short time-frame I had to work on it. I'm looking forward to iterating the site as my knowledge of these and other libraries grows.",
         "wikipedia":"https://github.com/shellycs50/portfolio"
       }
     ]
     }
+
+
+    
