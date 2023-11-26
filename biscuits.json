@@ -4,7 +4,7 @@
         "name": "Book Swap",
         "img": "https://i1.pickpik.com/photos/335/467/685/book-old-pile-stack-preview.jpg",
         "RDT": 5,
-        "desc": "In a Scrum Team, we built a FrontEnd React App allowing users to borrow, return and add new books via fetch with a pre-built API. I worked on or contributed to most if not all of the stories in the project.",
+        "desc": "In a Scrum Team, we built a FrontEnd React App allowing users to borrow, return and add new books via fetch with a pre-built RESTful API. Assigning various states from placeholders to respective data fetched from the API and down the component tree was an enjoyable way to build confidence in React. In my spare time after the project I implemented animations triggered by navigation and state changes using the framer-motion library",
         "wikipedia":"https://github.com/iO-Academy/23-sept-sarcasticfringeheads-bookswap-fe"
       },
       {
@@ -18,7 +18,7 @@
         "name": "Tideman Election Simulator",
         "img": "https://cs50.harvard.edu/x/2023/psets/3/no_condorcet_1.png",
         "RDT": 6,
-        "desc": "Instead of simply counting votes, the Tideman method uses a 'ranked pairs' or 'Tideman' method. This involves comparing every pair of candidates: for each pair, the candidate preferred by more voters wins that 'matchup'. The candidate who wins the most matchups is the winner of the election. The challenge was dealing with complexities like handling ties and cycles (where A beats B, B beats C, but C beats A).",
+        "desc": "Instead of simply counting votes, the Tideman method uses 'ranked pairs'. We compare every pair of candidates: for each pair, the candidate preferred by more voters wins that 'matchup'. The candidate who wins the most matchups is the winner of the election. The challenge was dealing with complexities like handling ties and cycles (where A beats B, B beats C, but C beats A).",
         "wikipedia":"https://github.com/shellycs50/tideman/"
       },
       {
