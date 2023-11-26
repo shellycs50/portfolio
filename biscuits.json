@@ -4,7 +4,7 @@
         "name": "Book Swap",
         "img": "https://i1.pickpik.com/photos/335/467/685/book-old-pile-stack-preview.jpg",
         "RDT": 5,
-        "desc": "In a Scrum Team, we built a FrontEnd React App allowing users to borrow, return and add new books via fetch with a pre-built RESTful API. Assigning various states from placeholders to respective data fetched from the API and down the component tree was an enjoyable way to build confidence in React. In my spare time after the project I implemented animations triggered by navigation and state changes using the framer-motion library",
+        "desc": "In a Scrum Team, we built a front-end React App allowing users to borrow, return and add new books via fetch with a pre-built RESTful API. Initialising various states to placeholders and then respective data fetched from the API and down the component tree. In my spare time after the project I implemented animations triggered by navigation and state changes using the framer-motion library.",
         "wikipedia":"https://github.com/iO-Academy/23-sept-sarcasticfringeheads-bookswap-fe"
       },
       {
