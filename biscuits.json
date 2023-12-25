@@ -1,12 +1,27 @@
 {
     "biscuits": [
       {
-        "name": "Book Swap",
+        "name": "Book Swap FE",
         "img": "https://i1.pickpik.com/photos/335/467/685/book-old-pile-stack-preview.jpg",
         "RDT": 5,
         "desc": "In a Scrum Team, we built a front-end React App allowing users to borrow, return and add new books via fetch with a pre-built RESTful API. Initialising various states to placeholders and then respective data fetched from the API and down the component tree. In my spare time after the project I implemented animations triggered by navigation and state changes using the framer-motion library.",
         "wikipedia":"https://github.com/iO-Academy/23-sept-sarcasticfringeheads-bookswap-fe"
       },
+      {
+        "name": "Book Swap BE",
+        "img": "https://i1.pickpik.com/photos/335/467/685/book-old-pile-stack-preview.jpg",
+        "RDT": 5,
+        "desc": "Our Scrum team went on to implement our own RESTful API using PHP and Laravel. Laravel has great documentation, but the biggest challenge was debugging a query builder where orWhere method calls would discount all previous queries rather than the smaller scope we wanted. We solved this by placing our orWhere methods in a callback.",
+        "wikipedia":"https://github.com/iO-Academy/23-sept-sarcasticfringeheads-bookswap-api"
+      },
+      {
+        "name": "Various Frontend and Problem Solving Challenges",
+        "img": "https://assets-global.website-files.com/62e3ee10882dc50bcae8d07a/634816d46fc4a32b2a583416_codewars-og-image.png",
+        "RDT": 5,
+        "desc": "Since graduating from iO Academy, I am developing my programming 'micro' skills using Frontend Mentor and Codewars.",
+        "wikipedia":"https://github.com/shellycs50/challenges"
+      },
+
       {
         "name": "Finance",
         "img": "https://cs50.harvard.edu/x/2020/tracks/web/finance/finance.png",
