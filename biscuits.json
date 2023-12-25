@@ -21,6 +21,13 @@
         "desc": "Since graduating from iO Academy, I am developing my programming 'micro' skills using Frontend Mentor and Codewars.",
         "wikipedia":"https://github.com/shellycs50/challenges"
       },
+      {
+        "name": "CLI Notetaker in Node",
+        "img": "https://assets.bigcartel.com/product_images/316311792/412345003_02.jpg",
+        "RDT": 5,
+        "desc": "Upon installation, users can use in their CLI a command, 'note', with various arguments allowing them to save, list, edit, delete, view notes and display them on a web page. This was part of the Frontend Masters 'Intro to Node' course. The biggest challenge I made for myself. I decided that upon being taught a concept, I would build out the rest of that concept's code without assistance to maximise retention and learning. For example, after watching an example jest test, I wrote the rest myself.",
+        "wikipedia":"https://github.com/shellycs50/cli_notetaker"
+      },
 
       {
         "name": "Finance",
